@@ -8,7 +8,6 @@ function Product() {
   const [filteredProducts, setFilteredProducts] = useState([]);
   const navigate = useNavigate();
 
-  // Fetching data on component mount
   useEffect(() => {
     GetData();
   }, []);
@@ -19,7 +18,7 @@ function Product() {
       .then((response) => {
         const products = response.data;
         setImage(products);
-        setFilteredProducts(products); // Initially show all products
+        setFilteredProducts(products); 
       })
       .catch((error) => {
         console.error("Error fetching data:", error);
@@ -67,7 +66,6 @@ function Product() {
       </h2>
 
       <Row className="mt-2 g-4">
-        {/* Loop through the filtered products and display them */}
         {filteredProducts.map((item) => (
           <Col md={3} sm={6} xs={12} key={item.id}>
             <Card style={{ width: '100%', height: 'auto', marginTop: '30px' ,transition: 'transform 0.3s ease, box-shadow 0.3s ease',}}
@@ -79,7 +77,7 @@ function Product() {
                    e.currentTarget.style.transform = 'scale(1)';
                    e.currentTarget.style.boxShadow = 'none';
                  }}
-              onClick={() => handleClick(item.id)} // Navigate to product details page on card click
+              onClick={() => handleClick(item.id)} 
             >
               <Card.Img
                 variant="top"
@@ -102,8 +100,8 @@ function Product() {
                   variant="primary"
                   style={{ width: '100%' }}
                   onClick={(e) => {
-                    e.stopPropagation(); // Prevent triggering the handleClick when clicking Buy Now
-                    navigate(`/showproduct/${item.id}`); // Navigate to the product details page when Buy Now is clicked
+                    e.stopPropagation(); 
+                    navigate(`/showproduct/${item.id}`);
                   }}
                 >
                   Buy Now

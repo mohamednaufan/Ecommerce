@@ -11,16 +11,14 @@ function ShowProduct() {
     const [datas, setDatas] = useState([]);
     const [isClicked, setIsClicked] = useState(false);
     const { id } = useParams();
-    const { addToCart } = useCart(); // Get the addToCart function from context
+    const { addToCart } = useCart(); 
 
     let Giturl = "https://raw.githubusercontent.com/mohamednaufan/Ecommerce/refs/heads/main/src/assets/";
 
     useEffect(() => {
-        // Fetch the data
         GetData();
     }, []);
 
-    // Fetch data from the API
     async function GetData() {
         try {
             const response = await axios.get("https://67d2872190e0670699bdf31c.mockapi.io/Admin/Admin");
@@ -30,7 +28,6 @@ function ShowProduct() {
         }
     }
 
-    // Filter the product data based on the id
     const filterData = datas.filter(a => a.id == id);
 
     const handleClick = () => {
@@ -43,7 +40,7 @@ function ShowProduct() {
     };
 
     const handleAddToCart = (product) => {
-        addToCart(product); // Add the product to the cart
+        addToCart(product); 
         toast.success("Added to Cart");
     };
 
@@ -55,7 +52,6 @@ function ShowProduct() {
                         <Col md={8} lg={6} key={a.id}>
                             <Card className="shadow-lg rounded">
                                 <Row noGutters>
-                                    {/* Left Section - Product Image */}
                                     <Col md={6}>
                                         <Card.Img 
                                             variant="top" 
@@ -66,7 +62,6 @@ function ShowProduct() {
                                         />
                                     </Col>
 
-                                    {/* Right Section - Product Info */}
                                     <Col md={6} className="p-4 d-flex flex-column justify-content-between">
                                         <div>
                                             <div className='text-end'>
@@ -85,7 +80,6 @@ function ShowProduct() {
                                                     <FaRegHeart className="fs-4" />
                                                 </button> 
                                             </div>
-                                            {/* Product Name */}
                                             <h4 className="text-dark font-weight-bold">{a.name}</h4>
                                             <h5 className="my-3 text-danger">
                                                 <strong>Price: </strong>
@@ -103,7 +97,7 @@ function ShowProduct() {
                                             <Button 
                                                 variant="warning" 
                                                 className="w-48" 
-                                                onClick={() => handleAddToCart(a)} // Call handleAddToCart on button click
+                                                onClick={() => handleAddToCart(a)} 
                                             >
                                                 Add to Cart
                                             </Button>

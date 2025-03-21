@@ -29,8 +29,7 @@ function Signup() {
       return;
     }
 
-    // API URL to send the data
-    const apiUrl = 'https://67d2872190e0670699bdf31c.mockapi.io/Admin/User'; // Replace with your API URL
+    const apiUrl = 'https://67d2872190e0670699bdf31c.mockapi.io/Admin/User'; 
 
     // Axios POST request
     axios
@@ -58,7 +57,6 @@ function Signup() {
             <Col md="10" lg="6" className="order-2 order-lg-1 d-flex flex-column align-items-center">
               <h1 className="text-center fw-bold mb-5 mx-1 mx-md-4 mt-4">Sign up</h1>
 
-              {/* Name Input */}
               <InputGroup className="mb-4">
                 <InputGroup.Text>
                   <FaUserAlt size={20} />
@@ -72,7 +70,6 @@ function Signup() {
                 />
               </InputGroup>
 
-              {/* Email Input */}
               <InputGroup className="mb-4">
                 <InputGroup.Text>
                   <FaEnvelope size={20} />
@@ -86,7 +83,6 @@ function Signup() {
                 />
               </InputGroup>
 
-              {/* Password Input */}
               <InputGroup className="mb-4">
                 <InputGroup.Text>
                   <FaLock size={20} />
@@ -100,7 +96,6 @@ function Signup() {
                 />
               </InputGroup>
 
-              {/* Confirm Password Input */}
               <InputGroup className="mb-4">
                 <InputGroup.Text>
                   <FaKey size={20} />
@@ -114,7 +109,6 @@ function Signup() {
                 />
               </InputGroup>
 
-              {/* Newsletter Checkbox */}
               <Form.Group className="mb-4">
                 <Form.Check
                   type="checkbox"
@@ -125,13 +119,11 @@ function Signup() {
                 />
               </Form.Group>
 
-              {/* Register Button */}
               <Button className="mb-4" size="lg" onClick={handleSubmit}>
                 Register
               </Button>
             </Col>
 
-            {/* Image Column */}
             <Col md="10" lg="6" className="order-1 order-lg-2 d-flex align-items-center">
               <img
                 src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/draw1.webp"

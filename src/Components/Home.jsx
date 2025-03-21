@@ -164,45 +164,44 @@ function Home() {
       <div>
         
       </div>
-      {/* Company Partners Section */}
      <div className='bg-light p-2'>
      <div className="container my-5">
      <h2
   className="text-center mb-4"
   style={{
-    fontSize: '2rem', // Slightly larger for added impact
-    fontWeight: '600', // Medium bold for a refined look
-    color: 'black', // A deep, rich color for a professional appearance
-    textTransform: 'capitalize', // Capitalize the first letter of each word
-    letterSpacing: '1px', // Subtle spacing for readability and elegance
-    display: 'inline-block', // Inline-block to enable the border animation
-    position: 'relative', // To position the underline effect
-    paddingBottom: '10px', // Space between text and the underline
-    // marginTop: '40px', // Balanced spacing from top
-    fontFamily: '"Georgia", "Times New Roman", serif', // Elegant serif font
-    transition: 'all 0.3s ease', // Smooth transition for hover effects
+    fontSize: '2rem', 
+    fontWeight: '600', 
+    color: 'black', 
+    textTransform: 'capitalize', 
+    letterSpacing: '1px', 
+    display: 'inline-block', 
+    position: 'relative',
+    paddingBottom: '10px', 
+    // marginTop: '40px', 
+    fontFamily: '"Georgia", "Times New Roman", serif', 
+    transition: 'all 0.3s ease', 
   }}
   onMouseEnter={(e) => {
-    e.target.style.color = 'black'; // Change text color on hover (red tone)
-    e.target.style.borderBottom = '3px solid black'; // Add a red underline on hover
+    e.target.style.color = 'black'; 
+    e.target.style.borderBottom = '3px solid black'; 
   }}
   onMouseLeave={(e) => {
-    e.target.style.color = '#2c3e50'; // Revert to default text color
-    e.target.style.borderBottom = '3px solid transparent'; // Remove the underline on hover out
+    e.target.style.color = '#2c3e50'; 
+    e.target.style.borderBottom = '3px solid transparent'; 
   }}
 >
 Our Company Partners
   <span
     style={{
-      position: 'absolute', // Positioning for the underline effect
+      position: 'absolute', 
       bottom: 0,
       left: 0,
       width: '100%',
       height: '3px',
-      backgroundColor: 'white', // Red underline color
-      transform: 'scaleX(0)', // Start hidden
-      transformOrigin: 'bottom right', // Animate from right to left
-      transition: 'transform 0.3s ease', // Smooth animation
+      backgroundColor: 'white', 
+      transform: 'scaleX(0)', 
+      transformOrigin: 'bottom right', 
+      transition: 'transform 0.3s ease',
     }}
   />
 </h2>
@@ -309,7 +308,6 @@ Our Company Partners
       </div>
      </div>
 
-      {/* Contact Form Section */}
       <Contact />
     </>
   );

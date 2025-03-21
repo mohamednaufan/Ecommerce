@@ -20,10 +20,8 @@ function Login() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // API URL for login
-    const apiUrl = 'https://67d2872190e0670699bdf31c.mockapi.io/Admin/User/login'; // Replace with your login API URL
+    const apiUrl = 'https://67d2872190e0670699bdf31c.mockapi.io/Admin/User/login'; 
 
-    // Axios POST request
     axios
       .post(apiUrl, {
         email: formData.email,
@@ -47,7 +45,6 @@ function Login() {
             <Col md="10" lg="6" className="order-2 order-lg-1 d-flex flex-column align-items-center">
               <h1 className="text-center fw-bold mb-5 mx-1 mx-md-4 mt-4">Log in</h1>
 
-              {/* Email Input */}
               <InputGroup className="mb-4">
                 <InputGroup.Text>
                   <FaUserAlt size={20} />
@@ -61,7 +58,6 @@ function Login() {
                 />
               </InputGroup>
 
-              {/* Password Input */}
               <InputGroup className="mb-4">
                 <InputGroup.Text>
                   <FaLock size={20} />
@@ -75,13 +71,11 @@ function Login() {
                 />
               </InputGroup>
 
-              {/* Login Button */}
               <Button className="mb-4" size="lg" onClick={handleSubmit}>
                 Log in
               </Button>
             </Col>
 
-            {/* Image Column */}
             <Col md="10" lg="6" className="order-1 order-lg-2 d-flex align-items-center">
               <img
                 src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/draw1.webp"
