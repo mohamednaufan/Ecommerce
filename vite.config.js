@@ -1,12 +1,12 @@
-// vite.config.js
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import path from 'path'
 
 export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      'react-router-dom': require.resolve('react-router-dom'), // Ensure correct resolution
+      'react-router-dom': path.resolve(__dirname, 'node_modules/react-router-dom'), // Resolve using path module
     },
   },
 })
